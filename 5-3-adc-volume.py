@@ -42,7 +42,7 @@ try:
         #GPIO.output(dac, decimal2binary(1))
         #print (GPIO.input(comp))
         value = adc()
-        GPIO.output(leds, decimal2binary((1 << int((value / 28))) - 1))
+        GPIO.output(leds, decimal2binary((1 << int((value / 27))) - 1))
         print (decimal2binary(value))
         print ("%d %.2fV" % (value, 3.3 / 256 * value))
 
