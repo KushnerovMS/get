@@ -44,14 +44,14 @@ try:
     curVal = 0
 
     GPIO.output(troyka, 1)
-    while (curVal < 0.97 * 225):
+    while (curVal < 0.97 * 256):
         curVal = adc()
         valList.append(curVal)
         GPIO.output(leds, decimal2binary(curVal))
         print (curVal)
 
     GPIO.output(troyka, 0)
-    while (curVal > 0.02 * 225):
+    while (curVal > 0.02 * 256):
         curVal = adc()
         valList.append(curVal)
         GPIO.output(leds, decimal2binary(curVal))

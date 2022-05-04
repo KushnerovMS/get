@@ -29,13 +29,15 @@ ax.set_ylabel("Напрежение U", fontsize=14)
 ax.grid(which="major", linewidth=1.2)
 ax.grid(which="minor", linestyle="--", color="gray", linewidth=0.5)
 
+ax.set(xlim = (0, 90), ylim = (0, 3.5))
+
 #ax.scatter(x, y1, c="red", label="y1 = 4*x")
 ax.plot (time, data / 256 * 3.3, label = "V(t)")
 
 text_kwargs = dict(fontsize=12)
 
-ax.text (40, 1.8, "Время заряда = %.2fc" % (time[data.argmax()]), **text_kwargs)
-ax.text (40, 1.6, "Время разряда = %.2fc" % (time[len(time) - 1] - time[data.argmax()]), **text_kwargs)
+ax.text (55, 1.8, "Время заряда = %.2fc" % (time[data.argmax()]), **text_kwargs)
+ax.text (55, 1.6, "Время разряда = %.2fc" % (time[len(time) - 1] - time[data.argmax()]), **text_kwargs)
 
 ax.legend()
 
