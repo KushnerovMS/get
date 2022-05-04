@@ -23,8 +23,8 @@ fig, ax = plt.subplots(figsize=(8, 6))
 
 ax.set_title("Процесс заряда и разрада конденсатора в RC-цепочке", fontsize=16)
 
-ax.set_xlabel("Веремя t", fontsize=14)        
-ax.set_ylabel("Напрежение U", fontsize=14)
+ax.set_xlabel("Время, с", fontsize=14)        
+ax.set_ylabel("Напрежение, В", fontsize=14)
 
 ax.grid(which="major", linewidth=1.2)
 ax.grid(which="minor", linestyle="--", color="gray", linewidth=0.5)
